@@ -1,0 +1,21 @@
+{
+  "name": "operational-command",
+  "version": "0.5.0",
+  "private": true,
+  "description": "A turn-based war-room strategy game for the phone. Deploy squads, defend the base, and pacify Sector 1.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node tools/serve.js",
+    "check": "node --check js/game.js && node --check js/app.js && node --check tools/serve.js && node --check tools/sim.js && node --check tools/policies.js && node --check tools/bundle.js",
+    "test": "node --test tests/unit/*.test.js",
+    "test:e2e": "playwright test",
+    "sim": "node tools/sim.js",
+    "bundle": "node tools/bundle.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.0"
+  }
+}
